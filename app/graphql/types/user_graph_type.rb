@@ -6,9 +6,9 @@ module Types
     field :preferred_name, String, null: true
     field :preferred_pronouns, String, null: true
     field :admin, Boolean, null: false
-    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :created_at_ms, Integer, null: false
-    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at_ms, Integer, null: false
+
+    field :posts, Types::PostType.connection_type, null: false
   end
 end
