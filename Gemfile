@@ -61,3 +61,4 @@ gem 'graphql'
 gem 'graphiql-rails', group: :development
 gem 'webpacker'
 gem 'react-rails'
+gem 'kaminari'

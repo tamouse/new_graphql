@@ -5,8 +5,8 @@ module Types
     field :title, String, null: false
     field :body, String, null: true
     field :published, Boolean, null: true
-    field :createdAtMs, Integer, null: false
-    field :updatedAtMs, Integer, null: false
+    field :createdAt, Integer, null: false
+    field :updatedAt, Integer, null: false
 
     field :user, Types::UserGraphType, null: false
   end
