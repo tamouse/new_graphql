@@ -1,9 +1,10 @@
 module Types
   class QueryType < Types::BaseObject
-    field :user, Types::UserGraphType, null: true,
-      description: "The user logged in, eventually"
-    def user
-      User.first
+    field :user, Types::UserGraphType, null: true, description: "The user logged in, eventually" do
+      argument :id, Integer, required: true
+    end
+    def user(id:)
+      User.find_by(id: id)
     end
 
     field :public_posts, [Types::PostType], null: true, description: "Public Posts" do
